@@ -14,8 +14,8 @@ ROOT_MAJOR := $(shell $(RC) --version | cut -d'.' -f1)
 SrcSuf = cc
 PcmSuf = _rdict.pcm
 
-CXXFLAGS += $(ROOTCFLAGS) -Wno-write-strings -D_FILE_OFFSET_BITS=64 -DDROP_CGAL -I.
-LIBS = $(ROOTLIBS)
+CXXFLAGS += $(ROOTCFLAGS) -Wno-write-strings -D_FILE_OFFSET_BITS=64 -DDROP_CGAL -I. -I/usr/include/tirpc
+LIBS = $(ROOTLIBS) -ltirpc
 
 ###
 
